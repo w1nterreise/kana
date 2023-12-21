@@ -5,26 +5,13 @@
 
 
 void
-print_colored(const char message[], WORD color) {
-    HANDLE hStdOut=get_std_handle(STD_OUTPUT_HANDLE);
-    DWORD num;
-    set_console_text_attribute(hStdOut, color);
-    write_console(hStdOut,message,strlen(message),&num, NULL);
-}
-
-void
-tests_run_all() {
-    test_layout_generation();
-    print_colored("tests finished", FOREGROUND_BLUE);
-}
-
-void
 test_layout_generation() {
     generate_new_layout();
     ____test_layout_generation____check_sequence();
     ____test_layout_generation____check_answer_options_no_repeat();
     ____test_layout_generation____answer_options_set_must_contain_right_answer();
 }
+
 
 void
 ____test_layout_generation____check_sequence() {
@@ -88,4 +75,20 @@ print_result(const char name[], const char description[], bool result) {
     print_colored(" - FAILED: ", FOREGROUND_RED);
     print_colored(description, FOREGROUND_INTENSITY);
     printf("\n");
+}
+
+
+void
+print_colored(const char message[], WORD color) {
+    HANDLE hStdOut=get_std_handle(STD_OUTPUT_HANDLE);
+    DWORD num;
+    set_console_text_attribute(hStdOut, color);
+    write_console(hStdOut,message,strlen(message),&num, NULL);
+}
+
+
+void
+tests_run_all() {
+    test_layout_generation();
+    print_colored("tests finished", FOREGROUND_BLUE);
 }
