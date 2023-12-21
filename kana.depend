@@ -1,0 +1,52 @@
+# depslib dependency file v1.0
+1703136189 source:c:\users\user\source\repos\c\kana\kana\main.c
+	<stdio.h>
+	<stdlib.h>
+	"view.h"
+	"case_fix.h"
+	"tests.h"
+
+1703001653 c:\users\user\source\repos\c\kana\kana\window.h
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+	"model.h"
+
+1703002083 source:c:\users\user\source\repos\c\kana\kana\window.c
+	"window.h"
+
+1703136531 c:\users\user\source\repos\c\kana\kana\model.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"define.h"
+
+1703132998 source:c:\users\user\source\repos\c\kana\kana\model.c
+	"model.h"
+
+1703136531 c:\users\user\source\repos\c\kana\kana\tests.h
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"model.h"
+	"define.h"
+
+1703133728 source:c:\users\user\source\repos\c\kana\kana\tests.c
+	"tests.h"
+	"case_fix.h"
+
+1703136531 c:\users\user\source\repos\c\kana\kana\view.h
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+	"model.h"
+	"define.h"
+
+1703135694 source:c:\users\user\source\repos\c\kana\kana\view.c
+	"view.h"
+	"case_fix.h"
+
+1703136531 c:\users\user\source\repos\c\kana\kana\case_fix.h
+
+1703136531 c:\users\user\source\repos\c\kana\kana\define.h
+
