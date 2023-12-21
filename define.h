@@ -27,9 +27,7 @@
 #define    GLYPH_HEIGHT    120
 
 
-#define    MODE_HIRAGANA   1
-#define    MODE_KATAKANA   -1
-
+#define    MODE   1
 
 
 #define    KANA_SIZE    107

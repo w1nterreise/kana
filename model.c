@@ -3,49 +3,6 @@
 
 
 
-const char * kana[] = {"a",   "i",   "u",   "e",   "o",
-                       "ka",  "ki",  "ku",  "ke",  "ko",
-                       "sa",  "shi", "su",  "se",  "so",
-                       "ta",  "chi", "tsu", "te",  "to",
-                       "na",  "ni",  "nu",  "ne",  "no",
-                       "ha",  "hi",  "fu",  "he",  "ho",
-                       "ma",  "mi",  "mu",  "me",  "mo",
-                       "ya",         "yu",         "yo",
-                       "ra",  "ri",  "ru",  "re",  "ro",
-                       "wa",         "wo",          "n",
-                       "ga",  "gi",  "gu",  "ge",  "go",
-                       "za",  "ji",  "zu",  "ze",  "zo",
-                       "da",  "dji", "dzu", "de",  "do",
-                       "ba",  "bi",  "bu",  "be",  "bo",
-                       "pa",  "pi",  "pu",  "pe",  "po",
-                       "kya",        "kyu",       "kyo",
-                       "sha",        "shu",       "sho",
-                       "cha",        "chu",       "cho",
-                       "nya",        "nyu",       "nyo",
-                       "hya",        "hyu",       "hyo",
-                       "mya",        "myu",       "myo",
-                       "rya",        "ryu",       "ryo",
-                       "gya",        "gyu",       "gyo",
-                       "ja",         "ju",        "jo",
-                       "dja",        "dju",       "djo",
-                       "bya",        "byu",       "byo",
-                       "pya",        "pyu",       "pyo"};
-
-
-void
-shuffle(int array[], size_t n) {
-    if (n > 1) {
-        size_t i;
-        for (i = 0; i < n - 1; i ++) {
-          size_t j = i + rand() / (RAND_MAX / (n - i) + 1);
-          int t = array[j];
-          array[j] = array[i];
-          array[i] = t;
-        }
-    }
-}
-
-
 void
 generate_new_layout() {
     model.pointer = 0;
@@ -119,6 +76,20 @@ pick(int option) {
 
 
 void
+shuffle(int array[], size_t n) {
+    if (n > 1) {
+        size_t i;
+        for (i = 0; i < n - 1; i ++) {
+          size_t j = i + rand() / (RAND_MAX / (n - i) + 1);
+          int t = array[j];
+          array[j] = array[i];
+          array[i] = t;
+        }
+    }
+}
+
+
+void
 choices_unlock_all() {
     for (int i = 0; i < 4; i ++) {
         model.choice_enable[i] = TRUE;
@@ -130,3 +101,32 @@ void
 choises_lock_all() {
     memset(model.choice_enable, 0, sizeof(bool) * 4);
 }
+
+
+const char * kana[] = {"a",   "i",   "u",   "e",   "o",
+                       "ka",  "ki",  "ku",  "ke",  "ko",
+                       "sa",  "shi", "su",  "se",  "so",
+                       "ta",  "chi", "tsu", "te",  "to",
+                       "na",  "ni",  "nu",  "ne",  "no",
+                       "ha",  "hi",  "fu",  "he",  "ho",
+                       "ma",  "mi",  "mu",  "me",  "mo",
+                       "ya",         "yu",         "yo",
+                       "ra",  "ri",  "ru",  "re",  "ro",
+                       "wa",         "wo",          "n",
+                       "ga",  "gi",  "gu",  "ge",  "go",
+                       "za",  "ji",  "zu",  "ze",  "zo",
+                       "da",  "dji", "dzu", "de",  "do",
+                       "ba",  "bi",  "bu",  "be",  "bo",
+                       "pa",  "pi",  "pu",  "pe",  "po",
+                       "kya",        "kyu",       "kyo",
+                       "sha",        "shu",       "sho",
+                       "cha",        "chu",       "cho",
+                       "nya",        "nyu",       "nyo",
+                       "hya",        "hyu",       "hyo",
+                       "mya",        "myu",       "myo",
+                       "rya",        "ryu",       "ryo",
+                       "gya",        "gyu",       "gyo",
+                       "ja",         "ju",        "jo",
+                       "dja",        "dju",       "djo",
+                       "bya",        "byu",       "byo",
+                       "pya",        "pyu",       "pyo"};

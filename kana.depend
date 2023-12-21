@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1703136189 source:c:\users\user\source\repos\c\kana\kana\main.c
+1703136556 source:c:\users\user\source\repos\c\kana\kana\main.c
 	<stdio.h>
 	<stdlib.h>
 	"view.h"
@@ -21,7 +21,7 @@
 	<string.h>
 	"define.h"
 
-1703132998 source:c:\users\user\source\repos\c\kana\kana\model.c
+1703140137 source:c:\users\user\source\repos\c\kana\kana\model.c
 	"model.h"
 
 1703136531 c:\users\user\source\repos\c\kana\kana\tests.h
@@ -31,7 +31,7 @@
 	"model.h"
 	"define.h"
 
-1703133728 source:c:\users\user\source\repos\c\kana\kana\tests.c
+1703137466 source:c:\users\user\source\repos\c\kana\kana\tests.c
 	"tests.h"
 	"case_fix.h"
 
@@ -42,11 +42,11 @@
 	"model.h"
 	"define.h"
 
-1703135694 source:c:\users\user\source\repos\c\kana\kana\view.c
+1703140041 source:c:\users\user\source\repos\c\kana\kana\view.c
 	"view.h"
 	"case_fix.h"
 
 1703136531 c:\users\user\source\repos\c\kana\kana\case_fix.h
 
-1703136531 c:\users\user\source\repos\c\kana\kana\define.h
+1703140041 c:\users\user\source\repos\c\kana\kana\define.h
 

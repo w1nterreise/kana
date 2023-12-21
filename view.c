@@ -58,7 +58,7 @@ void
 redraw() {
 
     int p = model.sequence[model.pointer];
-    select_object(form.hDcCompat, mode == MODE_HIRAGANA ? bmp.hiragana[p] : bmp.katakana[p]);
+    select_object(form.hDcCompat, mode == MODE ? bmp.hiragana[p] : bmp.katakana[p]);
     bit_blt(form.hDc, WINDOW_WIDTH / 2 - GLYPH_WIDTH / 2, GLYPH_TOP, GLYPH_WIDTH, GLYPH_HEIGHT, form.hDcCompat, 0, 0, SRCCOPY);
 }
 
@@ -88,7 +88,7 @@ init_window() {
     form.hDc = get_dc(form.hWnd);
     form.hDcCompat = create_compatible_dc(form.hDc);
     get_client_rect(form.hWnd, &form.clientRect);
-    mode = MODE_HIRAGANA;
+    mode = MODE;
 }
 
 
@@ -153,7 +153,7 @@ init_controls() {
 void
 update() {
 
-    set_window_text(form.toggle, mode == MODE_HIRAGANA ? "h" : "k");
+    set_window_text(form.toggle, mode == MODE ? "h" : "k");
     set_window_text(form.up,     kana[model.choices[model.pointer][0]]);
     set_window_text(form.down,   kana[model.choices[model.pointer][1]]);
     set_window_text(form.left,   kana[model.choices[model.pointer][2]]);
