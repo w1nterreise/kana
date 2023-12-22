@@ -28,10 +28,9 @@
 
 
 #define    MODE   1
-
-
 #define    KANA_SIZE    107
 #define    END          42
+
 
 typedef    int     bool;
 #define    TRUE    1

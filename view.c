@@ -196,23 +196,27 @@ cmd_common(int pick) {
 
 void
 cmd_up() {
+
     cmd_common(pick(0));
 }
 
 
 void
 cmd_down() {
+
     cmd_common(pick(1));
 }
 
 
 void
 cmd_left() {
+
     cmd_common(pick(2));
 }
 
 
 void
 cmd_right() {
+
     cmd_common(pick(3));
 }

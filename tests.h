@@ -8,8 +8,9 @@
 #include "define.h"
 
 
-void tests_run_all();
 
+
+void tests_run_all();
 void test_layout_generation();
 void ____test_layout_generation____check_sequence();
 void ____test_layout_generation____check_answer_options_no_repeat();

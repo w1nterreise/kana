@@ -9,6 +9,7 @@
 
 
 
+
 typedef struct {
     WNDCLASSA wndClass;
     HWND hWnd;
@@ -25,7 +26,6 @@ typedef struct {
 
 kana_form_t form;
 
-
 typedef struct {
     HBITMAP katakana[KANA_SIZE];
     HBITMAP hiragana[KANA_SIZE];
@@ -40,7 +40,6 @@ LRESULT window_process(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 void get_img_path(char * dst, const char romaji[], const char k[]);
 void load_bitmaps();
 bool assert_bitmaps_loaded();
-
 
 void init_window();
 void init_controls();

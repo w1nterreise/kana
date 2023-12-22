@@ -23,6 +23,7 @@ kana_list = [
     ('pa', 'ぱ', 'パ'), ('pi', 'ぴ', 'ピ'), ('pu', 'ぷ', 'プ'), ('pe', 'ぺ', 'ペ'), ('po', 'ぽ', 'ポ')
 ]
 
+
 yoo_on_list = [
     ('kya', 'きゃ', 'キャ'), ('kyu', 'きゅ', 'キュ'), ('kyo', 'きょ', 'キョ'),
     ('sha', 'しゃ', 'シャ'), ('shu', 'しゅ', 'シュ'), ('sho', 'しょ', 'ショ'),
@@ -60,11 +61,8 @@ def main():
     if not os.path.exists('img'):
         os.makedirs('img')
     
-    
     generate(kana_list, 110)
     generate(yoo_on_list, 90)
-    
-    
     
     
 if __name__ == "__main__":

@@ -6,6 +6,7 @@
 
 void
 test_layout_generation() {
+
     generate_new_layout();
     ____test_layout_generation____check_sequence();
     ____test_layout_generation____check_answer_options_no_repeat();
@@ -15,6 +16,7 @@ test_layout_generation() {
 
 void
 ____test_layout_generation____check_sequence() {
+
     char name[] = "sequence checking";
     char description[] = "must have all glyphs";
     bool map[KANA_SIZE];
@@ -32,6 +34,7 @@ ____test_layout_generation____check_sequence() {
 
 void
 ____test_layout_generation____check_answer_options_no_repeat() {
+
     char name[] = "different answer options";
     char description[] = "answer options cannot be repeated in one set";
     bool result = TRUE;
@@ -53,6 +56,7 @@ ____test_layout_generation____check_answer_options_no_repeat() {
 
 void
 ____test_layout_generation____answer_options_set_must_contain_right_answer() {
+
     char name[] = "right answer";
     char description[] = "answer options set must contain right answer";
     bool result = TRUE;
@@ -67,6 +71,7 @@ ____test_layout_generation____answer_options_set_must_contain_right_answer() {
 
 void
 print_result(const char name[], const char description[], bool result) {
+
     print_colored(name, FOREGROUND_INTENSITY);
     if (result == TRUE) {
         print_colored(" - OK\n", FOREGROUND_GREEN);
@@ -80,6 +85,7 @@ print_result(const char name[], const char description[], bool result) {
 
 void
 print_colored(const char message[], WORD color) {
+
     HANDLE hStdOut=get_std_handle(STD_OUTPUT_HANDLE);
     DWORD num;
     set_console_text_attribute(hStdOut, color);
@@ -89,6 +95,7 @@ print_colored(const char message[], WORD color) {
 
 void
 tests_run_all() {
+
     test_layout_generation();
     print_colored("tests finished", FOREGROUND_BLUE);
 }

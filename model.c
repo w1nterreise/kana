@@ -5,6 +5,7 @@
 
 void
 generate_new_layout() {
+
     model.pointer = 0;
     model.faults = 0;
     choices_unlock_all();
@@ -15,6 +16,7 @@ generate_new_layout() {
 
 void
 generate_new_sequence() {
+
     for (int i = 0; i < KANA_SIZE; i ++) {
         model.sequence[i] = i;
     }
@@ -24,6 +26,7 @@ generate_new_sequence() {
 
 void
 generate_answers() {
+
     for (int i = 0; i < KANA_SIZE; i ++) {
         int right = model.sequence[i];
         int selection[KANA_SIZE - 1];
@@ -43,6 +46,7 @@ generate_answers() {
 
 void
 print_sequence() {
+
         for (int i = 0; i < KANA_SIZE; i ++) {
         printf("%d - %d %d %d %d\n",
                model.sequence[i],
@@ -56,6 +60,7 @@ print_sequence() {
 
 int
 pick(int option) {
+
     if (model.choices[model.pointer][option] == model.sequence[model.pointer]) {
         model.pointer ++;
         if (model.pointer == KANA_SIZE) {
@@ -77,6 +82,7 @@ pick(int option) {
 
 void
 shuffle(int array[], size_t n) {
+
     if (n > 1) {
         size_t i;
         for (i = 0; i < n - 1; i ++) {
@@ -91,6 +97,7 @@ shuffle(int array[], size_t n) {
 
 void
 choices_unlock_all() {
+
     for (int i = 0; i < 4; i ++) {
         model.choice_enable[i] = TRUE;
     }
@@ -99,6 +106,7 @@ choices_unlock_all() {
 
 void
 choises_lock_all() {
+
     memset(model.choice_enable, 0, sizeof(bool) * 4);
 }
 

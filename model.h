@@ -8,6 +8,7 @@
 
 
 
+
 const char * kana[KANA_SIZE];
 
 typedef struct {
@@ -20,7 +21,6 @@ typedef struct {
 
 model_t model;
 
-
 void choices_unlock_all();
 void choises_lock_all();
 void shuffle(int array[], size_t n);
@@ -29,5 +29,3 @@ void generate_answers();
 void generate_new_layout();
 void print_sequence();
 int pick(int option);
-
-
